@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/Close.css">
+    <link rel="shortcut icon" href="/images/logo.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">VPMS</div> 
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FaQ.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <table border="1px">
+                <thead>
+                <tr>
+                    <th colspan="2">Cancel/Close Vehicle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="width: 100px;">Select Vehicle</td>
+                <td><select name="cancelselect" id="cancelVehicleSelect"></select></td></tr>
+                <tr><td style="width: 100px;">Action</td>
+                <td><input type="radio" name="C" id="Cancelled">Cancel <input type="radio" name="C" id="Closed">Close</td></tr>
+                <tr>
+                    <td>Close Date/Time</td>
+                    <td><input type="datetime-local" name="Closedatetime" id="closeDateTime"></td>
+                </tr>
+                <tr><td colspan="2"><button id="cancelBookingButton">Submit</button></td></tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="sub-containert">
+            <div class="linkers"><a href="/html/User_html/BookVehicle.html">Book Vehicle</a></div>
+            <div class="linkers"><a href="/html/User_html/Update_user.html">Update Mobile No</a></div>
+
+        </div>
+    </div>
+    <script src="/js/close.js"></script>
+</body>
+</html>

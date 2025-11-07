@@ -1,0 +1,214 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="D:\deva\4th year\INTERN\css\BookMain.css">
+    <link rel="shortcut icon" href="D:\deva\4th year\INTERN\images\logo.avif" type="image/x-icon">
+</head>
+
+<body onload="loadVehicles()">
+
+    <div class="navbar">
+        <div class="logo">VPMS</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FaQ.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <table border="1px">
+                <thead>
+                    <tr>
+                        <th colspan="2">Book Vehicle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 100px;">Vehicle Register No</td>
+                        <td><select name="Vehicle" id="">
+                                <option value="">Mahindra M4</option>
+                                <option value="">Mahindra M4</option>
+                                <option value="">Mahindra M4</option>
+                                <option value="">Mahindra M4</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Driver Name</td>
+                        <td><p id="driver_name"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Driver Mobile No</td>
+                        <td><p id="driver_mobile_no"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Driver Mobile No2</td>
+                        <td><p id="driver_mobile_no2"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Start Date/Time</td>
+                        <td><input type="datetime-local" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Start Location</td>
+                        <td><input type="text" name="" id="start_location" required></td>
+                    </tr>
+                    <tr>
+                        <td>End Location</td>
+                        <td><input type="text" name="" id="end_location" required></td>
+                    </tr>
+                    <tr>
+                        <td>User Mobile No</td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button>Book</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="sub-containert">
+            <div class="linkers"><a href="D:\deva\4th year\INTERN\html\Update.html">Update Mobile No</a></div>
+            <div class="linkers"><a href="D:\deva\4th year\INTERN\html\NewDriver.html">Register Driver</a></div>
+            <div class="linkers"><a href="D:\deva\4th year\INTERN\html\NewVehicle.html">Register Vehicle</a></div>
+            <div class="linkers"><a href="D:\deva\4th year\INTERN\html\Close.html">Close/Cancel Booking</a></div>
+            <div class="linkers"><a href="D:\deva\4th year\INTERN\html\View.html">View Booked Vehicle</a></div>
+            <div class="linkers"><a href="D:\deva\4th year\INTERN\html\History.html">Vehicle History</a></div>
+
+        </div>
+    </div>
+    <script>
+        async function loadVehicles() {
+            try {
+                const response = await fetch("http://localhost:8081/api/vehicles"); // Adjust URL if needed
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (data.success) {
+                    const vehicles = data.vehicles;
+                    const selectElement = document.querySelector('select[name=""]'); // Select the dropdown
+                    // Clear existing options
+                    selectElement.innerHTML = '';
+
+                    // Populate the dropdown with vehicle register numbers
+                    vehicles.forEach(vehicle => {
+                        const option = document.createElement("option");
+                        option.value = vehicle.vehicle_register_no; // Set value to register number
+                        option.textContent = vehicle.vehicle_register_no; // Display register number
+                        selectElement.appendChild(option);
+                    });
+                    // Set first vehicle name and mobile number in the HTML
+                    document.getElementById("driver_name").innerHTML = vehicles[0].driver_name;
+                    document.getElementById("driver_mobile_no").innerHTML = vehicles[0].driver_mobile_no;
+
+
+                } else {
+                    console.error("Failed to load vehicles:", data.message);
+                    alert("Failed to load vehicles: " + data.message);  // Display an alert
+                }
+            } catch (error) {
+                console.error("Error loading vehicles:", error);
+                alert("Error loading vehicles: " + error.message); // Display an alert
+            }
+        }
+
+        // Call loadVehicles when the page loads
+        window.addEventListener('load', loadVehicles);
+    </script>
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/BookMain.css">
+    <link rel="shortcut icon" href="../images/logo.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">VPMS</div> 
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FaQ.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <table border="1px">
+                <thead>
+                    <tr>
+                        <th colspan="2">Book Vehicle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 100px;">Vehicle Register No</td>
+                        <td>
+                            <select name="Vehicle" id="vehicleSelect">
+                                <option value="">Loading...</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Driver Name</td>
+                        <td><p id="driver_name">-</p></td>
+                    </tr>
+                    <tr>
+                        <td>Driver Mobile No</td>
+                        <td><p id="driver_mobile_no">-</p></td>
+                    </tr>
+                    <tr>
+                        <td>Driver Mobile No2</td>
+                        <td><p id="driver_mobile_no2">-</p></td>
+                    </tr>
+                    <tr>
+                        <td>Start Date/Time</td>
+                        <td><input type="datetime-local" name="start_datetime" id="start_datetime"></td>
+                    </tr>
+                    <tr>
+                        <td>Start Location</td>
+                        <td><input type="text" name="start_location" id="start_location" required></td>
+                    </tr>
+                    <tr>
+                        <td>End Location</td>
+                        <td><input type="text" name="end_location" id="end_location" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="bookButton">Book</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="sub-containert">
+            <div class="linkers"><a href="../html/Update.html">Update Mobile No</a></div>
+            <div class="linkers"><a href="../html/NewDriver.html">Register Driver</a></div>
+            <div class="linkers"><a href="../html/NewVehicle.html">Register Vehicle</a></div>
+            <div class="linkers"><a href="../html/Close.html">Close/Cancel Booking</a></div>
+            <div class="linkers"><a href="../html/View.html">View Booked Vehicle</a></div>
+            <div class="linkers"><a href="../html/History.html">Vehicle History</a></div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/BookMain.js"></script>
+</body>
+</html>

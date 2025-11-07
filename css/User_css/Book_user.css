@@ -1,0 +1,117 @@
+* {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+    font-weight: bold;
+}
+.navbar {
+	background-color: transparent;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	padding: 0 100px;
+	width: 88%;
+	z-index: 9999;
+	display: flex;
+	justify-content: space-between;
+}
+.navbar a {
+	float: left;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.navbar .logo {
+	float: left;
+	margin-right: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.8;
+}
+.navbar a:hover {
+	background-color: #fff;
+	color: #202020;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("D:/deva/4th year/INTERN/images/bmw.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+    background: black;
+    opacity: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(235, 122, 122, 0.5);
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.sub-container {
+    width: 400px;
+    padding: 20px;
+    background-color:lightgrey;
+    text-align: center;
+    border-radius: 5px;
+}
+.sub-containert {
+    width: 200px;
+    padding: 30px;
+    background-color: #000;;
+    border-radius: 5px;
+}
+table,td,th{
+    color: black;
+    align-items: center;
+    width: 400px;
+    padding: 5px 5px 5px 5px;
+}
+th{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+td{
+    width: 150px;
+    font-family:'Times New Roman', Times, serif;
+}
+option,select,input,button{
+    color: black;
+}
+
+button{
+    width: 100px;
+    padding: 5px 5px 5px 5px;
+}
+button:hover{
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+}
+
+.linkers{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 5px;
+    color: black;
+    margin: 10px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    background-color: black;
+}

@@ -1,0 +1,97 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link rel="icon" href="./logo.avif">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>
+        <span><img src="./car1.png" height="50px" width="100px" alt=""></span>
+        VEHICLE POOL MANAGEMENT SYSTEM
+        <span><img src="./car1.png" height="50px" width="100px" alt=""></span>
+    </h1>
+    <div class="container">
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+
+        <div id="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <input type="number" id="signup-emp_no" placeholder="Emp_No" required>
+            <input type="text" id="signup-name" placeholder="Emp_Name" required>
+            <input type="text" id="signup-division" placeholder="Division" required>
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link rel="icon" href="../images/logo.avif">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>
+        <span><img src="../images/car1.png" height="50px" width="100px" alt=""></span>
+        VEHICLE POOL MANAGEMENT SYSTEM 
+        <span><img src="../images/car1.png" height="50px" width="100px" alt=""></span>
+    </h1>
+
+    <div class="main-container">
+        <div class="container">
+            <div id="login-form">
+                <h2>User Login</h2>
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+            </div>
+
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <input type="number" id="mob_no1" placeholder="Mobile_no2" required>
+                <input type="number" id="mob_no2" placeholder="Mobile_no2" required>
+                <input type="text" id="signup-emp_no" placeholder="Emp_No" required>
+                <input type="text" id="signup-name" placeholder="Emp_Name" required>
+                <input type="text" id="signup-division" placeholder="Division" required>
+                <button onclick="signup()">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </div>
+
+            <p id="message"></p>
+        </div>
+        
+        <div class="container admin-container">
+            <h2>Admin Login</h2>
+            <input type="email" id="admin-email" placeholder="Admin Email" required>
+            <input type="password" id="admin-password" placeholder="Password" required>
+            <button onclick="adminLogin()">Admin Login</button>
+            <p id="admin-message"></p>
+        </div>
+    </div>
+
+    <script src="../js/Nscript.js"></script>
+</body>
+</html>

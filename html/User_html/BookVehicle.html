@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/BookMain.css">
+    <link rel="shortcut icon" href="/images/logo.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">VPMS</div> 
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FaQ.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <table border="1px">
+                <thead>
+                <tr>
+                    <th colspan="2">Book Vehicle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="width: 100px;">Vehicle Register No</td>
+                <td><select name="vehicleSelect" id="vehicleSelect">
+                    <option value="">Mahindra M4</option>
+                    <option value="">Mahindra M4</option>
+                    <option value="">Mahindra M4</option>
+                    <option value="">Mahindra M4</option>
+                </select></td></tr>
+                <tr><td>Driver Name</td>
+                    <td><p id="driver_name">-</p></td>
+                </tr>
+                <tr><td>Driver Mobile No</td><td><p id="driver_mobile_no">-</p></td></tr>
+                <tr><td>Driver Mobile No2</td><td><p id="driver_mobile_no2">-</p></td></tr>
+                <tr><td>Start Date/Time</td>
+                <td><input type="datetime-local" name="DateandTime" id="start_datetime"></td></tr>
+                <tr>
+                    <td>Start Location</td>
+                    <td><input type="text" name="Location" id="start_location" required></td>
+                </tr>
+                <tr><td>End Location</td>
+                <td><input type="text" name="endLocation" id="end_location" required></td></tr>
+                <tr><td colspan="2"><button id="bookButton">Book</button></td></tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="sub-containert">
+            <div class="linkers"><a href="./Update_user.html">Update Mobile No</a></div>
+            <div class="linkers"><a href="./Cancel_book.html">Close/Cancel Booking</a></div>
+
+        </div>
+    </div>
+    <script src="/js/BookMain.js"></script>
+</body>
+</html>

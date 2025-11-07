@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/NewVehicle.css">
+    <link rel="shortcut icon" href="../images/logo.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">VPMS</div> 
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FaQ.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <table border="1px">
+                <thead>
+                <tr>
+                    <th colspan="2">Register Vehicle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="width: 100px;">Vehicle NO</td>
+                <td><input type="text" id="vehicleNo" maxlength="10" required></td></tr>
+                <tr><td>Brand</td><td><input type="text" id="brand" maxlength="20" required></td></tr>
+                <tr><td>Model</td><td><input type="text" id="model" maxlength="15" required></td></tr>
+                <tr><td>InDate</td>
+                <td><input type="datetime-local" id="inDate" required></td></tr>
+                <tr>
+                    <td>Owner Name</td>
+                    <td><input type="text" id="ownerName" onkeypress="return /^[a-zA-Z ]*$/.test(event.key)" maxlength="25" required></td>
+                </tr>
+                <tr><td>Owner Mob No1</td><td><input type="number" id="ownerMob1" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0,10);" required></td></tr>
+                <tr><td>Owner Mob No2</td><td><input type="number" id="ownerMob2" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0,10);"></td></tr>
+                <tr><td colspan="2"><button id="addVehicleButton">Add Vehicle</button></td></tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="sub-containert">
+            <div class="linkers"><a href="../html/BookMain.html">Book Vehicle</a></div>
+            <div class="linkers"><a href="../html/Update.html">Update Mobile No</a></div>
+            <div class="linkers"><a href="../html/NewDriver.html">Register Driver</a></div>
+            <div class="linkers"><a href="../html/Close.html">Close/Cancel Booking</a></div>
+            <div class="linkers"><a href="../html/View.html">View Booked Vehicle</a></div>
+            <div class="linkers"><a href="../html/History.html">Vehicle History</a></div>
+
+        </div>
+    </div>
+    <!--<script>
+        function validateTextInput(input) {
+            input.value = input.value.replace(/[^a-zA-Z ]/g, '');
+        }
+    </script>-->
+    <script src="../js/NewVehicle.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/NewDriver.css">
+    <link rel="shortcut icon" href="../images/logo.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">VPMS</div> 
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FaQ.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <table border="1px">
+                <thead>
+                <tr>
+                    <th colspan="2">register Driver</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="width: 100px;">Driver Name</td>
+                <td><input type="text" id="driverName" maxlength="50" onkeypress="return /^[a-zA-Z ]*$/.test(event.key)" onclick="validateTextInput(this)"></td></tr>
+                <tr><td>Driver Mobile No</td><td><input type="number" id="driverMobile" required></td></tr>
+                <tr><td>Driver Mobile No2</td><td><input type="number" id="driverMobile2"></td></tr>
+                <tr><td>InDate</td>
+                <td><input type="datetime-local" id="inDate"></td></tr>
+                <tr>
+                    <td>Available Vehicle</td>
+                    <td><select id="availableVehicleSelect"></select></td>
+                </tr>
+                <tr><td colspan="2"><button id="addDriverButton">Add Driver</button></td></tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="sub-containert">
+            <div class="linkers"><a href="../html/BookMain.html">Book Vehicle</a></div>
+            <div class="linkers"><a href="../html/Update.html">Update Mobile No</a></div>
+            <div class="linkers"><a href="../html/NewVehicle.html">Register Vehicle</a></div>
+            <div class="linkers"><a href="../html/Close.html">Close/Cancel Booking</a></div>
+            <div class="linkers"><a href="../html/View.html">View Booked Vehicle</a></div>
+            <div class="linkers"><a href="../html/History.html">Vehicle History</a></div>
+
+        </div>
+    </div>
+    <script>
+        function validateTextInput(input) {
+            input.value = input.value.replace(/[^a-zA-Z ]/g, '');
+        }
+    </script>
+    <script src="../js/NewDriver.js"></script>
+</body>
+</html>

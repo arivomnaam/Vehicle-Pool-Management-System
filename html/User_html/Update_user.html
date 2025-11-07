@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/Update.css">
+    <link rel="shortcut icon" href="/images/logo.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">VPMS</div> 
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="FaQ.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <table border="1px">
+                <thead>
+                <tr>
+                    <th colspan="2">Update Mob No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="width: 100px;">Mobile No1</td>
+                <td><input type="number" name="" id="mobile1" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0,10);"></td></tr>
+                <tr><td style="width: 100px;">Mobile No2</td>
+                <td><input type="number" name="" id="mobile2" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0,10);"></td></tr>
+                
+                <tr><td colspan="2"><button onclick="/js/update.js">Update Number</button></td></tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="sub-containert">
+            <div class="linkers"><a href="/html/User_html/BookVehicle.html">Book Vehicle</a></div>
+            <div class="linkers"><a href="/html/User_html/Cancel_book.html">Close/Cancel Booking</a></div>
+
+        </div>
+    </div>
+    <script src="/js/update.js"></script>
+</body>
+</html>
